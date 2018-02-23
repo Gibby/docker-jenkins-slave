@@ -21,5 +21,8 @@ RUN chmod 0755 /usr/local/bin/terraform
 RUN wget https://s3.amazonaws.com/aws-cli/awscli-bundle.zip
 RUN unzip awscli-bundle.zip
 RUN ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+RUN rm packer_1.2.0_linux_amd64.zip
+RUN rm terraform_0.11.3_linux_amd64.zip
+RUN rm awscli-bundle.zip
 
 USER jenkins
